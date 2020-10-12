@@ -10,14 +10,14 @@ const { check, oneOf, validationResult } = require('express-validator');
 
 /* GET users listing. */
 
-// https://roads.googleapis.com/v1/nearestRoads?parameters&key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI
-//AutoComplete https://maps.googleapis.com/maps/api/place/autocomplete/json?input=CHUNG KI HOUSE&key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI&offset=3&language=zh-HK&components=country:HK
-// FindPlaceFromText https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI&input=CHUNG KI HOUSE, TIN CHUNG COURT, 3 TIN WING ROAD, TIN SHUI WAI, YUEN LONG&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&channel=testing123
+// https://roads.googleapis.com/v1/nearestRoads?parameters&key=<MY_SERCET_API_KEY>
+//AutoComplete https://maps.googleapis.com/maps/api/place/autocomplete/json?input=CHUNG KI HOUSE&key=<MY_SERCET_API_KEY>&offset=3&language=zh-HK&components=country:HK
+// FindPlaceFromText https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=<MY_SERCET_API_KEY>&input=CHUNG KI HOUSE, TIN CHUNG COURT, 3 TIN WING ROAD, TIN SHUI WAI, YUEN LONG&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&channel=testing123
 // Places Details https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name,rating,formatted_phone_number&key=YOUR_API_KEY
 
-// Geocoding https://maps.googleapis.com/maps/api/geocode/json?latlng=22.461233555750184,114.0&key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI&language=jp
-// POST Geolocation https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI
-// queryautocomplete https://maps.googleapis.com/maps/api/place/queryautocomplete/json?location=22.396427,114.109497&key=AIzaSyDrBgnnXniH5H4XwlkeNPRRi_W375IHzuI&language=zh_hk&radius=2500&input=Apartemen Vittoria Residence Jl. Daan Mogot No.Km. 13.8 9 3, RT.9/RW.3, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730, Indonesia
+// Geocoding https://maps.googleapis.com/maps/api/geocode/json?latlng=22.461233555750184,114.0&key=<MY_SERCET_API_KEY>&language=jp
+// POST Geolocation https://www.googleapis.com/geolocation/v1/geolocate?key=<MY_SERCET_API_KEY>
+// queryautocomplete https://maps.googleapis.com/maps/api/place/queryautocomplete/json?location=22.396427,114.109497&key=<MY_SERCET_API_KEY>&language=zh_hk&radius=2500&input=Apartemen Vittoria Residence Jl. Daan Mogot No.Km. 13.8 9 3, RT.9/RW.3, Cengkareng Tim., Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730, Indonesia
 // Direction https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY
 // DM https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626&key=YOUR_API_KEY
 const v3js = null;
